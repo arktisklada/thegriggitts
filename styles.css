@@ -1,11 +1,12 @@
-* { box-sizing: border-box; font: 400 16px "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-body { background: #111; height: 100%; }
+* { box-sizing: border-box; margin: 0; padding: 0; outline: 0; }
+body { background: #111; font: 400 16px "Helvetica Neue", Helvetica, Arial, sans-serif; height: 100%; }
   img { border: none; }
 
-  .content { background: url(graphics/bg-transparent.png); color: #eee; padding: 1em; width: 30%; }
+  .content { background: url(graphics/bg-transparent.png); color: #eee; padding: 1em; }
   .content h1 { font-size: 2.5em; margin-bottom: 0.5em; }
   .content p { font-size: 1em; line-height: 1.25em; margin-bottom: 1em; }
   .content p:last-child { margin-bottom: 0; }
+  .content input[type=text] { margin: 1em 0; padding: 0.25em; }
 
   #supersized-loader { position: absolute; top: 50%; left: 50%; z-index: 0; width: 60px; height: 60px; margin: -30px 0 0 -30px; text-indent: -999em; background: url(graphics/progress.gif) no-repeat center center;}
   
@@ -32,7 +33,7 @@ body { background: #111; height: 100%; }
       #navigation { float: right; margin: 0px 20px 0 0; }
         #play-button{ float: left; margin-top: 1px;border-right: 1px solid #333; cursor: pointer; }
 
-        #prevslide, #nextslide { position: absolute; height: 43px; width: 43px; top: 50%; margin-top: -21px; opacity: 0.6; cursor: pointer; }
+        #prevslide, #nextslide { position: absolute; height: 43px; width: 43px; bottom: 50px; margin-top: -21px; opacity: 0.6; cursor: pointer; }
           #prevslide { left: 10px; background: url('graphics/back.png'); }
           #nextslide { right: 10px; background: url('graphics/forward.png'); }
           #prevslide, #nextslide { opacity:  0.9; }
@@ -42,3 +43,18 @@ body { background: #111; height: 100%; }
             ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover { background-position: 0 0px; }
             ul#slide-list li a { display: block; width: 12px; height: 12px; background: url('graphics/nav-dot.png') no-repeat 0 -24px; cursor: pointer; }
               ul#slide-list li a:hover { background-position: 0 -12px; }
+
+
+@media only screen and (max-width: 40em) { /* max-width 640px, small screens */
+  body { font-size: 14px; }
+  .content { width: 100%; }
+}
+
+@media only screen and (min-width: 40.063em) { /* min-width 641px, medium screens */
+  body { font-size: 14px; }
+  .content { width: 50%; }
+}
+@media only screen and (min-width: 64.063em) { /* min-width 1025px, large screens */
+  body { font-size: 16px; }
+  .content { width: 30%; }
+}

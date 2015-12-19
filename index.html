@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>Welcome to The Griggitts</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" href="styles.css" type="text/css" media="screen" />
 
@@ -73,8 +74,30 @@
     <p>We are honored you will share in our special day.
       <br>Your presence is our gift!
     </p>
-    <p>Since we're on the road for the next 9 months before our wedding, physical Christmas gifts aren't practical. We are however saving up for our wedding celebration and would appreciate anything you can give to help out on that front.</p>
+    <p>As we're traveling light for the next 9 months, physical Christmas gifts aren't practical. However, we are saving up for our wedding celebration this coming Fall and would appreciate anything you can give to help out.</p>
     <p>Thanks for your love and we can't wait to see you soon!</p>
+    <div>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="mail@enorganik.com">
+        <input type="hidden" name="lc" value="US">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="item_name" value="Wedding Fund">
+        <input type="hidden" name="button_subtype" value="services">
+        <input type="hidden" name="no_note" value="0">
+        <input type="hidden" name="cn" value="Add a special note:">
+        <input type="hidden" name="no_shipping" value="1">
+        <input type="hidden" name="rm" value="1">
+        <input type="hidden" name="return" value="http://thegriggitts.com">
+        <input type="hidden" name="cancel_return" value="http://thegriggitts.com">
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynow_LG.gif:NonHosted">
+        <table>
+          <tr><td><label for="amount">Enter amount:</label></td></tr>
+          <tr><td><input type="text" name="amount" maxlength="200"></td></tr>
+        </table>
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynow_LG.gif" border="0" name="submit" alt="Send money with PayPal">
+      </form>
+    </div>
   </div>
 
 </body>
