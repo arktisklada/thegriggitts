@@ -2,6 +2,8 @@
 body { background: #111; font: 400 16px "Helvetica Neue", Helvetica, Arial, sans-serif; height: 100%; }
   img { border: none; }
 
+  .hide { display: none; }
+
   .content { background: url(graphics/bg-transparent.png); color: #eee; padding: 1em; }
   .content h1 { font-size: 2.5em; margin-bottom: 0.5em; }
   .content p { font-size: 1em; line-height: 1.25em; margin-bottom: 1em; }
