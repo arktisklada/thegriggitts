@@ -4,13 +4,13 @@ body { background: #111; font: 400 16px "Helvetica Neue", Helvetica, Arial, sans
 
   .hide { display: none; }
 
-  .content { background: url(graphics/bg-transparent.png); color: #eee; padding: 1em; }
+  .content { background: url(../graphics/bg-transparent.png); color: #eee; padding: 1em; }
   .content h1 { font-size: 2.5em; margin-bottom: 0.5em; }
   .content p { font-size: 1em; line-height: 1.25em; margin-bottom: 1em; }
   .content p:last-child { margin-bottom: 0; }
   .content input[type=text] { margin: 1em 0; padding: 0.25em; }
 
-  #supersized-loader { position: absolute; top: 50%; left: 50%; z-index: 0; width: 60px; height: 60px; margin: -30px 0 0 -30px; text-indent: -999em; background: url(graphics/progress.gif) no-repeat center center;}
+  #supersized-loader { position: absolute; top: 50%; left: 50%; z-index: 0; width: 60px; height: 60px; margin: -30px 0 0 -30px; text-indent: -999em; background: url(../graphics/progress.gif) no-repeat center center;}
   
   #supersized {  display: block; position: fixed; left: 0; top: 0; overflow: hidden; z-index: -999; height: 100%; width: 100%; }
     #supersized img { width: auto; height: auto; position: relative; display: none; outline: none; border: none; }
@@ -21,13 +21,13 @@ body { background: #111; font: 400 16px "Helvetica Neue", Helvetica, Arial, sans
     #supersized a { width: 100%; height: 100%; display: block; }
       #supersized li.prevslide { z-index: -20; }
       #supersized li.activeslide { z-index: -10; }
-      #supersized li.image-loading { background: #111 url(graphics/progress.gif) no-repeat center center; width: 100%; height: 100%; }
+      #supersized li.image-loading { background: #111 url(../graphics/progress.gif) no-repeat center center; width: 100%; height: 100%; }
         #supersized li.image-loading img { visibility: hidden; }
       #supersized li.prevslide img, #supersized li.activeslide img { display: inline; }
 
   /* Controls Bar
   ----------------------------*/
-  #controls-wrapper { margin: 0 auto; height: 42px; width: 100%; bottom: 0px; left: 0; z-index: 4; background: url(graphics/nav-bg.png); position: fixed; }
+  #controls-wrapper { margin: 0 auto; height: 42px; width: 100%; bottom: 0px; left: 0; z-index: 4; background: url(../graphics/nav-bg.png); position: fixed; }
     #controls { overflow: hidden; height: 100%; position: relative; text-align: left; z-index: 5; }
       #slidecounter { float: left; color: #EEE; font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif; text-shadow: #000 0 -1px 0; margin: 0px 10px 0 15px; line-height: 42px; }
       #slidecaption { overflow: hidden; float: left; color: #FFF; font: 400 14px "Helvetica Neue", Helvetica, Arial, sans-serif; text-shadow: #000 1px 1px 2px; margin: 0 20px 0 0; line-height: 42px; }
@@ -36,14 +36,14 @@ body { background: #111; font: 400 16px "Helvetica Neue", Helvetica, Arial, sans
         #play-button{ float: left; margin-top: 1px;border-right: 1px solid #333; cursor: pointer; }
 
         #prevslide, #nextslide { position: absolute; height: 43px; width: 43px; bottom: 50px; margin-top: -21px; opacity: 0.6; cursor: pointer; }
-          #prevslide { left: 10px; background: url('graphics/back.png'); }
-          #nextslide { right: 10px; background: url('graphics/forward.png'); }
+          #prevslide { left: 10px; background: url('../graphics/back.png'); }
+          #nextslide { right: 10px; background: url('../graphics/forward.png'); }
           #prevslide, #nextslide { opacity:  0.9; }
 
         ul#slide-list { padding: 15px 0; float: left; position: absolute; left: 50%; }
           ul#slide-list li { list-style: none; width: 12px; height: 12px; float: left; margin: 0 5px 0 0; }
             ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover { background-position: 0 0px; }
-            ul#slide-list li a { display: block; width: 12px; height: 12px; background: url('graphics/nav-dot.png') no-repeat 0 -24px; cursor: pointer; }
+            ul#slide-list li a { display: block; width: 12px; height: 12px; background: url('../graphics/nav-dot.png') no-repeat 0 -24px; cursor: pointer; }
               ul#slide-list li a:hover { background-position: 0 -12px; }
 
 
