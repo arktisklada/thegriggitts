@@ -42,7 +42,7 @@ label{
  padding: 0.5em 0.3em 0 0.5em;
  font-weight:600;
  font-family: 'Lora', serif;
- }
+}
 .logo  a h1:hover{
  color:#fff;	
  text-decoration:none;
@@ -123,6 +123,9 @@ a.sign {
   margin-top: 0.3em;
 }
 .banner{
+  position: relative;
+}
+.banner.background{
   background: url(../images/bg.jpg) no-repeat 0px 0px;
   background-size: cover;
   -webkit-background-size: cover;
@@ -130,7 +133,6 @@ a.sign {
   -o-background-size: cover;
   -ms-background-size: cover;
   min-height: 586px;
-  position: relative;
 }
 .banner-navigation {
   background-color: #2F3338;
@@ -193,7 +195,7 @@ a.sign {
 		display:block;
 		margin-right:0;
 	}
-	.top-menu  span.menu{
+	.top-menu span.menu{
 		display:block;
 	}
 	.top-menu  ul{
@@ -206,12 +208,12 @@ a.sign {
 	 text-align: center;
 	   z-index: 99999;
 	}
-	.top-menu ul.nav li  a{
+	.top-menu ul.nav li a{
 	  padding: 0.5em;
 	  font-weight: 400;
 	  font-size:0.9em;
 	  float:none;	
-	 }
+	}
 }
 /*----start-home---*/
 
@@ -463,7 +465,7 @@ a.sign {
   font-weight:400;
   text-transform: uppercase;
   margin-bottom: 0.5em;
- }
+}
 .story-grid p {
   text-align: center;
   line-height: 1.8em;
@@ -552,7 +554,7 @@ margin-right:0%;
   font-weight: 400;
   text-align: center;
     margin-bottom: 0.4em;
-  }
+}
 .about-section p {
   font-size: 0.9em;;
   line-height: 1.8em;
@@ -1171,12 +1173,6 @@ ul.contact-grids h5{
 /*--responsive--*/
 @media (max-width:1024px){
 	.banner {
-	  background: url(../images/bg.jpg) no-repeat 0px 0px;
-	  background-size: cover;
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  -ms-background-size: cover;
 	  min-height:454px;
 	}
   .banner-title h3 {
@@ -1210,12 +1206,6 @@ ul.contact-grids h5{
 }
 @media (max-width:768px){
 	.banner {
-	  background: url(../images/bg.jpg) no-repeat 0px 0px;
-	  background-size: cover;
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  -ms-background-size: cover;
 	  min-height: 289px;
 	}
   .banner-info {
@@ -1297,7 +1287,7 @@ ul.contact-grids h5{
 	}
 	.ch-grid {
     margin: 2em 0 0 0;
-    }
+  }
 	.banner.two {
 	  background: url(../images/bg-two.jpg) no-repeat 0px 0px;
 	  background-size: cover;
