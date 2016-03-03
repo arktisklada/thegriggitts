@@ -250,6 +250,7 @@ a.sign {
   color: transparent;
   font-family: 'Niconne', cursive;
   font-size: 1.5em;
+  line-height: 1em;
   vertical-align: middle;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
@@ -1172,7 +1173,7 @@ ul.contact-grids h5{
 
 /*--responsive--*/
 @media (max-width:1024px){
-	.banner {
+	.banner.background {
 	  min-height:454px;
 	}
   .banner-title h3 {
@@ -1205,7 +1206,7 @@ ul.contact-grids h5{
 	}
 }
 @media (max-width:768px){
-	.banner {
+	.banner.background {
 	  min-height: 289px;
 	}
   .banner-info {
