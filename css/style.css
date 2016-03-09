@@ -576,7 +576,7 @@ margin-right:0%;
   color: #2F3338;
 }
 .story-box {
-  background-color: #ffffff;
+  background-color: #f9f9f9;
   border: 1px solid #666;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
   font-size: 1.25em;
@@ -588,6 +588,10 @@ margin-right:0%;
   font-family: 'Niconne', cursive;
   font-size: 2em;
   margin-bottom: 0.5em;
+}
+.story-box img {
+  padding-top: 1em;
+  width: 100%;
 }
 
 /*--people-section--*/
