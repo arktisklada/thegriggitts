@@ -581,7 +581,7 @@ a.sign {
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
   font-size: 1.25em;
   margin-bottom: 5em;
-  padding: 1.5em 1.5em 2em;
+  padding: 1.5em;
   border-radius: 1.5em 0 1.5em 0;
 }
 .story-box h4 {
@@ -590,8 +590,11 @@ a.sign {
   margin-bottom: 0.5em;
 }
 .story-box img {
-  padding-top: 1em;
+  padding-bottom: 1em;
   width: 100%;
+}
+.story-box img:last-child {
+  padding-bottom: 0;
 }
 
 /*--people-section--*/
