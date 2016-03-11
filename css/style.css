@@ -3,7 +3,8 @@ html, body{
   font-size: 100%;
   background: #FFf;
 }
-body a,.grid_1,plan_1,plan_1.one,plan_1.two,i.icon1, i.icon2, i.icon3, i.icon4, i.icon5, i.icon6 {
+body a,
+.grid_1,plan_1,plan_1.one,plan_1.two,i.icon1, i.icon2, i.icon3, i.icon4, i.icon5, i.icon6 {
 	transition:0.2s all;
 	-webkit-transition:0.2s all;
 	-moz-transition:0.2s all;
@@ -55,7 +56,8 @@ label{
 
 /*--banner--*/
 
-.form-control,.btn {
+.form-control,
+.btn {
   border-radius: inherit !important;
 }
 /* sweep-to-bottom effect */
@@ -180,7 +182,9 @@ a.sign {
 .top-menu ul li a:hover{
 	color:#fff;
 }
-.banner-bottom,.peoples,.news{
+.banner-bottom,
+.peoples,
+.news{
 	padding:4em 0;
 }
 
@@ -273,26 +277,6 @@ a.sign {
   text-align: center;
   margin: 0 auto;
   padding: 0 0 1em;
-}
-/*--welcome-section--*/
-.welcome-section {
-  padding:4em 0;
-  text-align:center;
-  
-}
-.welcome-section h2{
- font-family: 'Niconne', cursive;
- color:#00B198;
- font-size:4em;
- font-weight:400;
- text-align:center;
-}
-.welcome-section  p {
-  font-size: 0.9em;
-  margin: 1% auto 0;
-  width: 75%;
-  line-height: 1.8em;
-  color: #2F3338;
 }
 .ch-grid {
   margin: 3em 0 0 0;
@@ -444,16 +428,23 @@ a.sign {
 
 /*--story-grids--*/
 
-.story-section {
-  padding: 4em 0;
-  background-color: #eee;
-}
-.story-section h3 {
+.about-section h3,
+.story-section h3,
+.people-section h3,
+.event-section h3 {
   font-family: 'Niconne', cursive;
   color: #00B198;
   font-size: 4em;
   font-weight: 400;
   text-align: center;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #999;
+  margin-bottom: 0.75em;
+}
+
+.story-section {
+  padding: 4em 0;
+  background-color: #eee;
 }
 .story-grid img {
   border-radius: 50%;
@@ -486,13 +477,6 @@ a.sign {
   padding: 4em 0 8em 0;
   text-align:center;
 }
-.event-section h3{
- font-family: 'Niconne', cursive;
- color: #00B198;
- font-size: 4em;
- font-weight: 400;
- text-align: center;
-}
 .event-grid {
   background-color: #EEE;
   width: 32.5%;
@@ -509,7 +493,7 @@ a.sign {
   font-size: 1.2em;
   font-weight:400;
   text-transform: uppercase;
-  Margin: 1.5em 0 0.5em 0;
+  margin: 1.5em 0 0.5em 0;
 }
 .event-grid p {
   text-align: center;
@@ -560,14 +544,6 @@ a.sign {
   padding: 4em 0;
   text-align: center;
 }
-.about-section h3{
-  font-family: 'Niconne', cursive;
-  color: #00B198;
-  font-size: 4em;
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 1em;
-}
 .about-section p {
   font-size: 0.9em;;
   line-height: 1.8em;
@@ -597,54 +573,55 @@ a.sign {
 
 /*--people-section--*/
 
-.people-section{
+.people-section {
   padding: 4em 0;
   background: #eee;
 }
-.people-section2 ,.people-section1{
-  padding: 0 2px;
-}
-.people-grides  h3 {
-  font-family: 'Niconne', cursive;
+.people-section h4 {
   color: #00B198;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 400;
+  line-height: 0;
+  margin: 0.75em 0;
   text-align: center;
-  margin-bottom: 0.7em;
 }
-.people-gride1,.people-gride2 {
-	margin: 17px 0;
+.people-section h4.cursive {
+  font-family: 'Niconne', cursive;
 }
-.people-img {
-	margin-top: 3px;
-}
-.people-img img {
+.people-section img {
+  margin-top: 3px;
   width: 100%;
 }
-.people-text  h4 {
+.person-content {
+  display: none;
+}
+.person {
+  height: 28em;
+  padding-top: 0.75em;
+}
+.person h4 {
   color: #00B198;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight:400;
   text-transform: uppercase;
-  margin-top:2px;
+  text-align: left;
 }
-.people-text  h6 {
+.person h6 {
   color: #2F3338;
-  font-size: 0.9em;
-  font-weight:400;
+  font-size: 1.1em;
+  font-weight: 400;
   text-transform: uppercase;
-  margin: 0.7em 0 0.5em 0;
+  margin: 0.25em 0 1em 0;
 }
-.people-text p {
+.person p {
   font-size: 0.9em;
   line-height: 1.8em;
   color: #2F3338;
 }
-.people-text{
-  text-align:right;
-}
-.people-text.two {
-  text-align:left;
+.person.empty h6,
+.person.empty h6,
+.person.empty p {
+  margin: 0;
 }
 
 /*--big-event--*/
@@ -675,7 +652,8 @@ a.sign {
   font-weight: 400;
   text-align: center;
 }
-.rsvp-content input[type="text"],.rsvp-content  textarea {
+.rsvp-content input[type="text"],
+.rsvp-content  textarea {
   padding: 1.1em;
   width: 100%;
   margin: 1% 0% 0 0;
@@ -735,10 +713,15 @@ a.sign {
   .banner-title h3 {
     font-size: 3em;
   }
-	.welcome-section h2,.story-section h3,.event-section h3,.about-section h3,.people-grides h3,h3.type,.signup-section h3{
+  h3.type,
+  .story-section h3,
+  .event-section h3,
+  .about-section h3,
+  .people-section h3{
 	  font-size: 3.6em;
 	}
-	.moments h3,.contact h3 {
+	.moments h3,
+  .contact h3 {
 	 font-size: 3.7em;
 	}
 	.forgetit input[type="text"] {
@@ -757,9 +740,49 @@ a.sign {
   .labelTop {
 	  width: 35%;
 	}
-  .cus_info_wrap input[type="text"], .cus_info_wrap input[type="password"] {
+  .cus_info_wrap input[type="text"],
+  .cus_info_wrap input[type="password"] {
 	  width: 62%;
 	}
+}
+@media (max-width:991px) {
+  .col-10 {
+    clear: both;
+    width: 100%;
+  }
+  .people-section h4 {
+    color: #00B198;
+    font-size: 2.5em;
+    padding-top: 0.75em;
+  }
+  .people-images .col-10 img {
+    display: block;
+    float: left;
+    width: 48%;
+  }
+  .person-content {
+    display: block;
+    float: right;
+    font-size: 1em;
+    width: 48%;
+  }
+  .person-content > h4 {
+    text-align: left;
+    font-size: 1.5em;
+    line-height: 1.25em;
+    margin-bottom: 0.25em;
+    padding-top: 0.25em;
+  }
+  .person-content > h6 {
+    text-align: left;
+    font-size: 1.25em;
+  }
+  .person-content > p {
+    display: none;
+  }
+  .person {
+    display: none;
+  }
 }
 @media (max-width:768px) {
   .banner.two {
@@ -824,7 +847,11 @@ a.sign {
     padding:88px 0 0 0;
     height: 126px;
   }
-  .welcome-section h2, .story-section h3, .event-section h3, .about-section h3, .people-grides h3, h3.type, .signup-section h3 {
+  h3.type,
+  .story-section h3,
+  .event-section h3,
+  .about-section h3,
+  .people-section h3 {
 	  font-size: 3.15em;
   }
   .about-section {
@@ -837,16 +864,10 @@ a.sign {
   .story-box {
     margin-bottom: 3em;
   }
-	.people-section1 {
-	  width: 100%;
-	  float: left;
-	}
-	.people-section2 {
-	  padding: 0 2px;
-	  float: right;
-	  width: 100%;
-	}
-  .moments,.contact,.typrography,.signup-section,.about-section,.people-section,.welcome-section{
+  .moments,
+  .contact,
+  .about-section,
+  .people-section {
 	  padding: 2em 0 0;
   }
 	.moments h3, .contact h3 {
