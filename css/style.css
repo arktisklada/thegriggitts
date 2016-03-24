@@ -34,6 +34,9 @@ ul{
 label{
 	margin:0;
 }
+.hidden {
+  display: none;
+}
 .logo {
 	float:left;
 }
@@ -186,6 +189,10 @@ a.sign {
 .peoples,
 .news{
 	padding:4em 0;
+}
+
+.form-field {
+  margin-bottom: 1em;
 }
 
 @media only screen and (max-width : 768px) {

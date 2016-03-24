@@ -22,6 +22,14 @@
     ga('create', 'UA-20440114-7', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <script type="text/javascript">
+    var submitted=false;
+    $("#rsvp-form").on("submit", function(e) {
+      $("#rsvp-form *").fadeOut(2000);
+      $("#rsvp-form").prepend("Thanks!  We'll see you on September 25!");
+    });
+  </script>
 </head>
 
 <body>
@@ -45,12 +53,36 @@
   </div>
 
   <div class="story-section">
+    <div class="container rsvp-content hidden">
+      <iframe src="https://docs.google.com/forms/d/1r2gMjj3Hy9HkfYH7IUkQzObdPPrYRXM2p8OgCV6POX8/viewform?embedded=true" height="500" frameborder="0" marginheight="0" marginwidth="0" style="width:100%;">Loading...</iframe>
+    </div>
     <div class="container rsvp-content">
       <h3>RSVP</h3>
       <div class="row">
         <div class="col-md-12">
           <h4 class="text-center">More info coming soon</h4>
           <br>
+          <div class="hidden">
+            <form name="rsvp-form" id="rsvp-form" enctype="text/plain" action="https://docs.google.com/forms/d/1r2gMjj3Hy9HkfYH7IUkQzObdPPrYRXM2p8OgCV6POX8/formResponse" target="form-submission-iframe" onsubmit="submitted=true;">
+              <div class="form-field">
+                Your Full Name:<br>
+                <input type="text" name="entry.1334343991" id="entry.1334343991"><br>
+              </div>
+              <div class="form-field">
+                Your Entree:<br>
+                <input type="text" name="entry.626412056" id="entry.626412056">
+              </div>
+              <div class="form-field">
+                Your Date's Entree:<br>
+                <input type="text" name="entry.663742653" id="entry.663742653">
+              </div>
+              <div class="form-field">
+                <input type="submit" value="Submit">
+              </div>
+            </form>
+            <iframe name="form-submission-iframe" id="form-submission-iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+          </div>
+
           <p class="text-center">
             Redondo Beach, CA
             <br>
