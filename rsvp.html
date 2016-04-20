@@ -10,6 +10,7 @@
 
   <script src="js/jquery-1.11.1.min.js"></script>
   <script src="js/scripts.js"></script>
+  <script src="js/rsvp.js"></script>
 
   <link href="http://fonts.googleapis.com/css?family=Lora:400,400italic|Niconne" rel="stylesheet" type="text/css">
 
@@ -24,11 +25,11 @@
   </script>
 
   <script type="text/javascript">
-    var submitted=false;
-    $("#rsvp-form").on("submit", function(e) {
-      $("#rsvp-form *").fadeOut(2000);
-      $("#rsvp-form").prepend("Thanks!  We'll see you on September 25!");
-    });
+    // var submitted=false;
+    // $("#rsvp-form").on("submit", function(e) {
+    //   $("#rsvp-form *").fadeOut(2000);
+    //   $("#rsvp-form").prepend("Thanks!  We'll see you on September 25!");
+    // });
   </script>
 </head>
 
@@ -53,54 +54,58 @@
   </div>
 
   <div class="story-section">
-    <div class="container rsvp-content hidden">
-      <iframe src="https://docs.google.com/forms/d/1r2gMjj3Hy9HkfYH7IUkQzObdPPrYRXM2p8OgCV6POX8/viewform?embedded=true" height="500" frameborder="0" marginheight="0" marginwidth="0" style="width:100%;">Loading...</iframe>
-    </div>
     <div class="container rsvp-content">
       <h3>RSVP</h3>
+      <div class="row margin-bottom">
+        <div class="col-md-6 col-md-offset-3">
+          <div id="error" class="alert alert-danger hidden"></div>
+          <form id="rsvp-form" action="localhost:4567" method="post">
+            <div class="form-field step-1">
+              Your First Name:<br>
+              <input type="text" name="rsvp[first_name]"><br>
+            </div>
+            <div class="form-field step-1">
+              Your Last Name:<br>
+              <input type="text" name="rsvp[last_name]"><br>
+            </div>
+
+            <div class="form-field step-2 hidden">
+              Will you attend:<br>
+              <input type="radio" name="rsvp[attendance]" value="Attending" id="rsvp_attendance_yes"><label for="rsvp_attendance_yes">I'll be there!</label>
+              <input type="radio" name="rsvp[attendance]" value="Not attending" id="rsvp_attendance_no"><label for="rsvp_attendance_no">Regretfully, no</labvel>
+            </div>
+            <div class="form-field step-2 hidden">
+              Your Meal choice:<br>
+              <select name="rsvp[meal_choice]" disabled="disabled">
+                <option value="vegetarian">Vegetarian</option>
+                <option value="meat">Meat</option>
+                <option value="fish">Fish</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <input id="submit" type="submit" value="Find My Invitation">
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-6 col-md-offset-3 hidden" id="success">
+          <h4>Thanks, we've received your RSVP.
+            <br><br>
+            We're excited to celebrate with you!
+            <br><br><br>
+          </h4>
+          <button class="reset-form">RSVP for another guest</button>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-md-12">
-          <h4 class="text-center">More info coming soon</h4>
-          <br>
-          <div class="hidden">
-            <form name="rsvp-form" id="rsvp-form" enctype="text/plain" action="https://docs.google.com/forms/d/1r2gMjj3Hy9HkfYH7IUkQzObdPPrYRXM2p8OgCV6POX8/formResponse" target="form-submission-iframe" onsubmit="submitted=true;">
-              <div class="form-field">
-                Your Full Name:<br>
-                <input type="text" name="entry.1334343991" id="entry.1334343991"><br>
-              </div>
-              <div class="form-field">
-                Your Entree:<br>
-                <input type="text" name="entry.626412056" id="entry.626412056">
-              </div>
-              <div class="form-field">
-                Your Date's Entree:<br>
-                <input type="text" name="entry.663742653" id="entry.663742653">
-              </div>
-              <div class="form-field">
-                <input type="submit" value="Submit">
-              </div>
-            </form>
-            <iframe name="form-submission-iframe" id="form-submission-iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-          </div>
-
           <p class="text-center">
             Redondo Beach, CA
             <br>
             September 25, 2016
           </p>
         </div>
-      </div>
-
-      <div class="rsvp-content hide">
-        <form>
-          <input type="text" class="textbox" placeholder="Your Name">
-          <input type="text" class="textbox" placeholder="Your E-Mail">
-          <div class="clear"> </div>
-          <div><textarea placeholder="Message"></textarea></div>
-          <div class="submit"> 
-            <input type="submit" value="SEND" />
-          </div>
-        </form>
       </div>
     </div>
   </div>
