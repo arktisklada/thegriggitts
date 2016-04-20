@@ -21,7 +21,7 @@ $(function() {
     disableForm();
 
     if(!visitorFound) {
-      $.get('http://localhost:4567', formData, function(data) {
+      $.get('http://rsvp.thegriggitts.com:4567', formData, function(data) {
         if(data == true) {
           $form.find('select').prop('disabled', false);
           $form.find('.step-2').removeClass('hidden');
@@ -35,7 +35,7 @@ $(function() {
         enableForm();
       });
     } else {
-      $.post('http://localhost:4567', formData, function(data) {
+      $.post('http://rsvp.thegriggitts.com:4567', formData, function(data) {
         if(data == true) {
           showSuccessMessage();
         } else {
