@@ -5,6 +5,7 @@ $(function() {
   $error = $('#error');
 
   $('.reset-form').on('click', function() {
+    visitorFound = false;
     $('#success').addClass('hidden');
     enableForm();
     $form.find('input, select').val('');
