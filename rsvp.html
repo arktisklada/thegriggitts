@@ -66,7 +66,7 @@
               <input type="radio" name="rsvp[attendance]" value="Attending" id="rsvp_attendance_yes"><label for="rsvp_attendance_yes">I'll be there!</label>
               <input type="radio" name="rsvp[attendance]" value="Sorry" id="rsvp_attendance_no"><label for="rsvp_attendance_no">Regretfully, no</label>
             </div>
-            <div class="form-field step-2 hidden">
+            <div class="form-field step-3 hidden">
               Your Meal choice:<br>
               <select name="rsvp[meal_choice]" disabled="disabled">
                 <option value="vegetarian">Vegetarian</option>
@@ -84,6 +84,14 @@
           <h4>Thanks, we've received your RSVP.
             <br><br>
             We're excited to celebrate with you!
+            <br><br><br>
+          </h4>
+          <button class="reset-form">RSVP for another guest</button>
+        </div>
+        <div class="col-md-6 col-md-offset-3 hidden" id="regrets">
+          <h4>We're sorry you won't be there!
+            <br><br>
+            Thanks for letting us know.  We'll see you soon.
             <br><br><br>
           </h4>
           <button class="reset-form">RSVP for another guest</button>

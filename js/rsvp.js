@@ -7,12 +7,22 @@ $(function() {
   $('.reset-form').on('click', function() {
     visitorFound = false;
     $('#success').addClass('hidden');
+    $('#regrets').addClass('hidden');
     enableForm();
     $form.find('input, select').val('');
     $form.find('select').prop('disabled', true);
     $form.find('.step-2').addClass('hidden');
+    $form.find('.step-3').addClass('hidden');
     $('#submit').attr('value', 'Find My Invitation');
     $form.removeClass('hidden');
+  });
+
+  $('input[name="rsvp[attendance]"').on('change', function() {
+    if($(this).val() == "Attending") {
+      $form.find('.step-3').removeClass('hidden');
+    } else {
+      $form.find('.step-3').addClass('hidden');
+    }
   });
 
   $form.on('submit', function(e) {
@@ -38,7 +48,11 @@ $(function() {
     } else {
       $.post('http://rsvp.thegriggitts.com:4567', formData, function(data) {
         if(data == true) {
-          showSuccessMessage();
+          if($('#rsvp_attendance_yes').prop('checked')) {
+            showSuccessMessage();
+          } else {
+            showRegretsMessage();
+          }
         } else {
           errorMessage = "There was an error. Please let Clayton know: "
           showErrorMessage(errorMessage);
@@ -73,5 +87,11 @@ $(function() {
     hideErrorMessage();
     $form.addClass('hidden');
     $('#success').removeClass('hidden');
+  }
+
+  function showRegretsMessage() {
+    hideErrorMessage();
+    $form.addClass('hidden');
+    $('#regrets').removeClass('hidden');
   }
 });

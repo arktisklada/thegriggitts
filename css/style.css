@@ -3,58 +3,63 @@ html, body {
   font-size: 100%;
   background: #FFf;
 }
-body a,
-.grid_1,plan_1,plan_1.one,plan_1.two,i.icon1, i.icon2, i.icon3, i.icon4, i.icon5, i.icon6 {
-	transition:0.2s all;
-	-webkit-transition:0.2s all;
-	-moz-transition:0.2s all;
-	-o-transition:0.2s all;
-	-ms-transition:0.2s all;
+a {
+	transition: 0.2s all;
+	-webkit-transition: 0.2s all;
+	-moz-transition: 0.2s all;
+	-o-transition: 0.2s all;
+	-ms-transition: 0.2s all;
 }
-a:hover{
- text-decoration:none;
+a:hover {
+ text-decoration: none;
 }
 input[type="button"],input[type="submit"],select {
-	transition:0.2s all;
-	-webkit-transition:0.2s all;
-	-moz-transition:0.2s all;
-	-o-transition:0.2s all;
-	-ms-transition:0.2s all;
+	transition: 0.2s all;
+	-webkit-transition: 0.2s all;
+	-moz-transition: 0.2s all;
+	-o-transition: 0.2s all;
+	-ms-transition: 0.2s all;
 }
 h1,h2,h3,h4,h5,h6 {
-	margin:0;
+	margin: 0;
 }	
 p {
-	margin:0;
+	margin: 0;
+}
+p a {
+  text-decoration: underline;
 }
 ul {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 }
 label {
-	margin:0;
+	margin: 0;
 }
 .hidden {
   display: none;
 }
+.container p {
+  margin-bottom: 1em;
+}
 .logo {
-	float:left;
+	float: left;
 }
 .logo a h1 {
- color:#fff;
- font-size:2.5em;
+ color: #fff;
+ font-size: 2.5em;
  padding: 0.5em 0.3em 0 0.5em;
- font-weight:600;
+ font-weight: 600;
  font-family: 'Lora', serif;
 }
 .logo a h1:hover {
- color:#fff;
- text-decoration:none;
+ color: #fff;
+ text-decoration: none;
 }
 .logo a h1 span {
- color:#00b198;
+ color: #00b198;
  font-family: 'Niconne', cursive;
- font-weight:400;
+ font-weight: 400;
 }
 
 /*--banner--*/
@@ -66,14 +71,14 @@ label {
 /* sweep-to-bottom effect */
 .hvr-sweep-to-bottom {
   display: inline-block;
+  position: relative;
   vertical-align: middle;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.2s;
@@ -107,9 +112,6 @@ label {
   transform: scaleY(1);
 }
 /* //Sweep To Bottom */
-.logo1 a {
-	display:block;
-}
 input.form-control {
   border: none;
 }
@@ -458,6 +460,12 @@ a.sign {
 .story-section {
   padding: 4em 0;
   background-color: #eee;
+}
+.story-section h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1em 0;
+  text-align: center;
 }
 .story-grid img {
   border-radius: 50%;
