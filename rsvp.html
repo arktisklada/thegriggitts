@@ -49,35 +49,41 @@
     <div class="container rsvp-content">
       <h3>RSVP</h3>
       <div class="row margin-bottom">
-        <h4 class="center">This will be enabled as soon as we have finished our menu tasting</h4>
-      </div>
-      <div class="row margin-bottom hidden">
         <div class="col-md-6 col-md-offset-3">
           <div id="error" class="alert alert-danger hidden"></div>
-          <form id="rsvp-form" action="localhost:4567" method="post">
+          <form id="rsvp-form" action="http://rsvp.thegriggitts.com:4567" method="post">
+            <p>Due to capacity limitations, only those addressed on the invitation are invited to RSVP.</p>
+            <p>Additionally, as much as we love children, due to venue restrictions, only those in our immediate family will be permitted to attend. Thank you for understanding (and let us know if you need help finding a babysitter!)</p>
+
+            <br>
+
             <div class="form-field step-1">
-              Your First Name:<br>
-              <input type="text" name="rsvp[first_name]"><br>
+              <label for="rsvp_first_name">Your First Name:</label>
+              <input type="text" name="rsvp[first_name]" id="rsvp_first_name">
             </div>
             <div class="form-field step-1">
-              Your Last Name:<br>
-              <input type="text" name="rsvp[last_name]"><br>
+              <label for="rsvp_last_name">Your Last Name:</label>
+              <input type="text" name="rsvp[last_name]" id="rsvp_last_name">
             </div>
 
-            <div class="form-field step-2 hidden">
-              Will you attend:<br>
+            <div class="form-field radios step-2 hidden">
+              <strong>Will you attend:</strong><br>
               <input type="radio" name="rsvp[attendance]" value="Attending" id="rsvp_attendance_yes"><label for="rsvp_attendance_yes">I'll be there!</label>
               <input type="radio" name="rsvp[attendance]" value="Sorry" id="rsvp_attendance_no"><label for="rsvp_attendance_no">Regretfully, no</label>
             </div>
             <div class="form-field step-3 hidden">
-              Your Meal choice:<br>
-              <select name="rsvp[meal_choice]" disabled="disabled">
-                <option value="vegetarian">Vegetarian</option>
-                <option value="meat">Meat</option>
-                <option value="fish">Fish</option>
+              <label for="rsvp_email">Your Email:</label>
+              <input type="text" name="rsvp[email]" id="rsvp_email"><br>
+            </div>
+            <div class="form-field step-3 hidden">
+              <label for="rsvp_meal_choice">Your Meal choice:</label>
+              <select name="rsvp[meal_choice]" id="rsvp_meal_choice">
+                <option value="tofu">Grilled Marinated Tofu, Roasted Sweet Potato Hash, Baby Bok Choy, Marcona Almonds, Buerre Noisette</option>
+                <option value="filet">Pan Seared 8oz Filet, Herb Roasted Fingerling Potatoes, Bernaise Sauce, Red Wine Demi Glace</option>
+                <option value="seabass">Pan Seared Pacific Sea Bass, Couscous with Roasted Artichokes, Cherry Tomatoes, Caper Buerre Blanc</option>
               </select>
             </div>
-            <div class="form-field">
+            <div class="form-action">
               <input id="submit" type="submit" value="Find My Invitation">
             </div>
           </form>
@@ -101,7 +107,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row footer">
         <div class="col-md-12">
           <p class="text-center">
             Redondo Beach, CA

@@ -34,6 +34,8 @@ ul {
 	padding: 0;
 }
 label {
+  display: block;
+  font-weight: bold;
 	margin: 0;
 }
 .hidden {
@@ -194,6 +196,12 @@ a.sign {
 }
 
 .form-field {
+  margin-bottom: 1.5em;
+}
+.form-field.radios label {
+  display: inline;
+}
+.form-action {
   margin-bottom: 1em;
 }
 
@@ -726,6 +734,12 @@ a.sign {
 }
 .margin-bottom {
   margin-bottom: 2em;
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+  margin-top: 2em;
+  padding-top: 2em;
 }
 
 /*--responsive--*/
