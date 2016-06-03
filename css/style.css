@@ -749,6 +749,14 @@ a.sign {
   padding-top: 2em;
 }
 
+.image-group {
+  margin-bottom: 2em;
+  padding-top: 1em;
+}
+.image-group img {
+  width: 100%;
+}
+
 /*--responsive--*/
 
 @media (max-width:1024px){
