@@ -10,6 +10,7 @@ $(function() {
     $('#regrets').addClass('hidden');
     enableForm();
     $form.find('input, select').val('');
+    $form.find('input').prop('readonly', false);
     $form.find('select').prop('disabled', true);
     $form.find('.step-2').addClass('hidden');
     $form.find('.step-3').addClass('hidden');
@@ -34,6 +35,7 @@ $(function() {
     if(!visitorFound) {
       $.get('http://rsvp.thegriggitts.com:4567', formData, function(data) {
         if(data == true) {
+          $form.find('.step-1 input').prop('readonly', true);
           $form.find('select').prop('disabled', false);
           $form.find('.step-2').removeClass('hidden');
           $('#submit').attr('value', 'Send My RSVP');
