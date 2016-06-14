@@ -18,7 +18,7 @@ $(function() {
     $form.removeClass('hidden');
   });
 
-  $('input[name="rsvp[attendance]"').on('change', function() {
+  $('input[name="rsvp[attendance]"]').on('change', function() {
     if($(this).val() == "Attending") {
       $form.find('.step-3').removeClass('hidden');
     } else {
@@ -63,6 +63,8 @@ $(function() {
         enableForm();
       });
     }
+
+    return false;
   });
 
   function disableForm() {
