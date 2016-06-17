@@ -5,6 +5,7 @@ html, body {
 }
 a {
   color: #00B198;
+  cursor: pointer;
 	transition: 0.2s all;
 	-webkit-transition: 0.2s all;
 	-moz-transition: 0.2s all;
@@ -152,7 +153,7 @@ a.sign {
   -moz-background-size: cover;
   -o-background-size: cover;
   -ms-background-size: cover;
-  min-height: 586px;
+  min-height: 620px;
 }
 .banner.transparent {
   position: absolute;
@@ -221,48 +222,6 @@ a.sign {
   border-color: #C97382;
 }
 
-@media only screen and (max-width : 768px) {
-	span.menu {
-    width: 35px;
-    height: 35px;
-    background: url(../images/nav.png)no-repeat 0px 0px;
-    display: inline-block;
-    float: right;
-    cursor: pointer;
-    margin: 1.3em 1em;
-  }
-  .top-menu {
-    float: none;
-    margin-top: 0em;
-  }
-  .top-menu ul.nav{
-    display:none;
-  }
-  .top-menu  ul.nav li {
-    display:block;
-    margin-right:0;
-  }
-  .top-menu span.menu{
-    display:block;
-  }
-  .top-menu  ul{
-    margin: 60px 0;
-    padding: 2% 0;
-    z-index: 999;
-    position: absolute;
-    width: 96%;
-    background: rgba(47, 51, 56, 0.88);
-    text-align: center;
-    z-index: 99999;
-  }
-  .top-menu ul.nav li a{
-    padding: 0.5em;
-    font-weight: 400;
-    font-size:0.9em;
-    float:none;
-  }
-}
-
 /*--home--*/
 
 .banner-title {
@@ -280,19 +239,20 @@ a.sign {
 }
 .banner-info{
   /*background-color: #00B198;*/
+  font-size: 2em;
   margin: 21% auto 0;
   text-align: center;
 }
 .banner-info h3{
   color: #fff;
-  font-size: 5em;
+  font-size: 2.5em;
   font-weight: 400;
   z-index: 999;
   font-family: 'Lora', serif;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
 }
-.banner-info h3 span{
+.banner-info .cursive {
   /*color: #00B198;*/
   color: black;
   color: transparent;
@@ -302,161 +262,30 @@ a.sign {
   vertical-align: middle;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
+  text-decoration: none;
 }
-.banner-info p{
+.banner-info p {
   color: #fff;
-  font-size: 2em;
-  z-index: 999;
-  text-align: center;
   margin: 0 auto;
+  text-align: center;
+}
+.banner-info a {
+  color: #fff;
+  display: block;
+  margin-top: 1em ;
   padding: 0 0 1em;
 }
-.ch-grid {
-  margin: 3em 0 0 0;
-  padding: 0;
-  list-style: none;
-  display: block;
+.banner-info .banner-link {
+  font-size: 0.8em;
+  font-weight: normal;
   text-align: center;
-  width: 100%;
+  padding: 0.25em 0;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
 }
-.ch-grid:after,
-.ch-item:before {
-	content: '';
-  display: table;
-}
-.ch-grid:after {
-	clear: both;
-}
-.ch-grid li {
-	width:320px;
-	height:320px;
-	display: inline-block;
-  margin: 2% 6%;
-}
-.ch-item {
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	position: relative;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-	cursor: default;
-}
-.ch-info-wrap{
-	position: absolute;
-  width:300px;
-  height:300px;
-  border-radius: 50%;
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -o-perspective: 800px;
-  -ms-perspective: 800px;
-  perspective: 800px;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  top: 10px;
-  left: 10px;
-  background: #f9f9f9 url(../images/bg.jpg);
-  box-shadow: 
-  0 0 0 20px rgba(255,255,255,0.2), 
-  inset 0 0 3px rgba(115,114, 23, 0.8);
-}
-.ch-info{
-	position: absolute;
-	width:300px;
-  height:300px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -o-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;	
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-.ch-info > div {
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	background-position: center center;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-o-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-.ch-info .ch-info-back {
-	-webkit-transform: rotate3d(0,1,0,180deg);
-	-moz-transform: rotate3d(0,1,0,180deg);
-	-o-transform: rotate3d(0,1,0,180deg);
-	-ms-transform: rotate3d(0,1,0,180deg);
-	transform: rotate3d(0,1,0,180deg);
-	background: #079480;
-}
-.ch-img-1 { 
-	background-image: url(../images/w2.jpg);
-}
-.ch-img-2 { 
-	background-image: url(../images/w1.jpg);
-}
-.ch-info h4 {
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1.4em;
-  margin: 0 15px;
-  padding: 113px 0 0 0;
-  height: 159px;
-  font-family: 'Open Sans', Arial, sans-serif;
-  text-shadow: 0 0 1px #fff, 
-  0 1px 2px rgba(0,0,0,0.3);
-}
-.ch-info h5 {
-	color: #fff;
-	padding: 10px 5px;
-	font-style: italic;
-	margin: 0 30px;
-	font-size: 18px;
-	border-top: 1px solid rgba(255,255,255,0.5);
-}
-.ch-info p a {
-	display: block;
-	color: #fff;
-	color: rgba(255,255,255,0.7);
-	font-style: normal;
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: 9px;
-	letter-spacing: 1px;
-	padding-top: 4px;
-	font-family: 'Open Sans', Arial, sans-serif;
-}
-.ch-info p a:hover {
-	color: #fff222;
-	color: rgba(255,242,34, 0.8);
-}
-.ch-item:hover .ch-info-wrap {
-	box-shadow: 
-  0 0 0 0 rgba(255,255,255,0.8), 
-  inset 0 0 3px rgba(115,114, 23, 0.8);
-}
-.ch-item:hover .ch-info {
-	-webkit-transform: rotate3d(0,1,0,-180deg);
-	-moz-transform: rotate3d(0,1,0,-180deg);
-	-o-transform: rotate3d(0,1,0,-180deg);
-	-ms-transform: rotate3d(0,1,0,-180deg);
-	transform: rotate3d(0,1,0,-180deg);
+.banner-info .banner-link:hover {
+  color: #e74c3c;
+  text-decoration: none;
 }
 
 /*--story-grids--*/
@@ -478,6 +307,9 @@ a.sign {
 .story-section {
   padding: 4em 0;
   background-color: #eee;
+}
+.story-section.short {
+  padding-top: 1em;
 }
 .story-section h4 {
   font-size: 1.5em;
@@ -758,9 +590,9 @@ a.sign {
 
 /*--responsive--*/
 
-@media (max-width:1024px){
+@media (max-width:1024px) {
 	.banner.background {
-	  min-height:454px;
+	  min-height: 470px;
 	}
   .banner-title h3 {
     font-size: 3em;
@@ -793,8 +625,9 @@ a.sign {
   .cus_info_wrap input[type="password"] {
 	  width: 62%;
 	}
-}
-@media (max-width:991px) {
+  .banner-info {
+    font-size: 1.5em;
+  }
   .col-10 {
     clear: both;
     width: 100%;
@@ -834,6 +667,46 @@ a.sign {
   }
 }
 @media (max-width:768px) {
+  span.menu {
+    width: 35px;
+    height: 35px;
+    background: url(../images/nav.png)no-repeat 0px 0px;
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    margin: 1.3em 1em;
+  }
+  .top-menu {
+    float: none;
+    margin-top: 0em;
+  }
+  .top-menu ul.nav{
+    display:none;
+  }
+  .top-menu  ul.nav li {
+    display:block;
+    margin-right:0;
+  }
+  .top-menu span.menu{
+    display:block;
+  }
+  .top-menu  ul{
+    margin: 60px 0;
+    padding: 2% 0;
+    z-index: 999;
+    position: absolute;
+    width: 96%;
+    background: rgba(47, 51, 56, 0.88);
+    text-align: center;
+    z-index: 99999;
+  }
+  .top-menu ul.nav li a{
+    padding: 0.5em;
+    font-weight: 400;
+    font-size:0.9em;
+    float:none;
+  }
+
   .banner.two {
     background: url(../images/bg-two.jpg) no-repeat 0px 0px;
     background-size: cover;
@@ -859,9 +732,10 @@ a.sign {
     padding-right: 0;
   }
 	.banner.background {
-	  min-height: 289px;
+	  min-height: 300px;
 	}
   .banner-info {
+    font-size: 1em;
     margin: 8% auto 0;
     text-align: center;
   }
@@ -874,27 +748,6 @@ a.sign {
 	.callbacks_tabs {
 	  bottom: -13%;
 	  left: 41%;
-  }
-  .ch-info {
-    width: 247px;
-    height: 247px;
-  }
-  .ch-info-wrap {
-    width: 247px;
-    height: 247px;
-    top: 11px;
-    left: 12px;
-  }
-  .ch-grid li {
-    width: 267px;
-    height: 267px;
-  }
-  .ch-info h4 {
-    letter-spacing: 2px;
-    font-size: 1.3em;
-    margin: 0 15px;
-    padding:88px 0 0 0;
-    height: 126px;
   }
   h3.type,
   .story-section h3,
@@ -925,9 +778,6 @@ a.sign {
 	.event-section {
 	  padding: 2em 0px 6em 0;
 	}
-	.ch-grid {
-    margin: 2em 0 0 0;
-  }
   .story-grid {
     float: left;
     width:100%;

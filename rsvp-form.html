@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Twila and Clayton get Hitched</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />  
+
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/rsvp.js"></script>
+
+  <link href="http://fonts.googleapis.com/css?family=Lora:400,400italic|Niconne" rel="stylesheet" type="text/css">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-20440114-7', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+<body>
+  <div class="banner" id="home">
+    <div class="banner-navigation">
+      <div class="container">
+        <div class="logo">
+          <a href="/"><h1>T&C<span> Wedding</span></h1></a>
+        </div>
+        <span class="menu"></span>
+        <div class="top-menu">
+          <ul class="nav">
+            <li class="hvr-sweep-to-bottom"><a href="photos.html">Photos</a></li>
+            <li class="hvr-sweep-to-bottom"><a href="rsvp-form.html">RSVP</a></li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="story-section">
+    <div class="container rsvp-content">
+      <h3>RSVP</h3>
+      <div class="row margin-bottom">
+        <div class="col-md-6 col-md-offset-3">
+          <div id="error" class="alert alert-danger hidden"></div>
+          <form id="rsvp-form" action="http://rsvp.thegriggitts.com:4567" method="post">
+            <p>Due to capacity limitations, only those addressed on the invitation are invited to RSVP.</p>
+            <p>Additionally, as much as we love children, due to venue restrictions, only those in our immediate family will be permitted to attend. Thank you for understanding (and let us know if you need help finding a babysitter!)</p>
+
+            <br>
+
+            <div class="form-field step-1">
+              <label for="rsvp_first_name">Your First Name:</label>
+              <input type="text" name="rsvp[first_name]" id="rsvp_first_name">
+            </div>
+            <div class="form-field step-1">
+              <label for="rsvp_last_name">Your Last Name:</label>
+              <input type="text" name="rsvp[last_name]" id="rsvp_last_name">
+            </div>
+
+            <div class="form-field radios step-2 hidden">
+              <strong>Will you attend:</strong><br>
+              <input type="radio" name="rsvp[attendance]" value="Attending" id="rsvp_attendance_yes"><label for="rsvp_attendance_yes">I'll be there!</label>
+              <input type="radio" name="rsvp[attendance]" value="Sorry" id="rsvp_attendance_no"><label for="rsvp_attendance_no">Regretfully, no</label>
+            </div>
+            <div class="form-field step-3 hidden">
+              <label for="rsvp_email">Your Email:</label>
+              <input type="text" name="rsvp[email]" id="rsvp_email"><br>
+            </div>
+            <div class="form-field step-3 hidden">
+              <label for="rsvp_meal_choice">Your Meal choice:</label>
+              <select name="rsvp[meal_choice]" id="rsvp_meal_choice">
+                <option value="tofu">Grilled Marinated Tofu, Roasted Sweet Potato Hash, Baby Bok Choy, Marcona Almonds, Buerre Noisette</option>
+                <option value="filet">Pan Seared 8oz Filet, Herb Roasted Fingerling Potatoes, Bernaise Sauce, Red Wine Demi Glace</option>
+                <option value="seabass">Pan Seared Pacific Sea Bass, Couscous with Roasted Artichokes, Cherry Tomatoes, Caper Buerre Blanc</option>
+              </select>
+            </div>
+            <div class="form-action">
+              <input id="submit" type="submit" value="Find My Invitation">
+            </div>
+          </form>
+
+          <p><br>P.S. If you experience ANY issues at all, please let <a href="mailto:claytonliggitt@gmail.com">claytonliggitt@gmail.com</a> know about it!</p>
+        </div>
+
+        <div class="col-md-6 col-md-offset-3 text-center hidden" id="success">
+          <h4>Thanks, we've received your RSVP.
+            <br><br>
+            We're excited to celebrate with you!
+            <br><br><br>
+          </h4>
+          <button class="reset-form">RSVP for another guest</button>
+        </div>
+        <div class="col-md-6 col-md-offset-3 text-center hidden" id="regrets">
+          <h4>We're sorry you won't be there!
+            <br><br>
+            Thanks for letting us know.  We'll see you soon.
+            <br><br><br>
+          </h4>
+          <button class="reset-form">RSVP for another guest</button>
+        </div>
+      </div>
+
+      <div class="row footer">
+        <div class="col-md-12">
+          <p class="text-center">
+            Redondo Beach, CA
+            <br>
+            September 25, 2016
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
