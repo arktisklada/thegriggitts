@@ -24,7 +24,9 @@ a:hover,
 a:focus {
   color: #e74c3c;
 }
-input[type="button"],input[type="submit"],select {
+input[type="button"],
+input[type="submit"],
+select {
 	transition: 0.2s all;
 	-webkit-transition: 0.2s all;
 	-moz-transition: 0.2s all;
@@ -571,6 +573,17 @@ a.sign {
 .rsvp-content #success {
   text-align: center;
 }
+.rsvp-content .error-message {
+  color: red;
+  font-size: 0.9em;
+  padding: 0.25em 0;
+}
+.rsvp-content input.has-error,
+.rsvp-content select.has-error {
+  border: 1px solid red;
+}
+
+
 .margin-bottom {
   margin-bottom: 2em;
 }
